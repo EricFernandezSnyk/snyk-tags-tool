@@ -3,7 +3,7 @@
 import typer
 
 from typing import Optional
-from snyk_tags import __app_name__, __version__, list, collection, tag, attribute
+from snyk_tags import __app_name__, __version__, list, collection, tag, attribute, ignore
 
 snyk = typer.style("snyk-tags", bold=True)
 snykcmd = typer.style("snyk-tags tag --help", bold=True, fg=typer.colors.MAGENTA)
@@ -19,7 +19,7 @@ app.add_typer(tag.app, name="tag", help="Apply product/custom tags based on proj
 app.add_typer(list.app, name="list", help="List all project types of a Snyk product and all attribute types")
 app.add_typer(collection.app, name="collection", help="Apply custom tags to all projects within a collection e.g Git repo")
 app.add_typer(attribute.app, name="attribute", help="Apply attributes to all projects within a collection e.g Git repo")
-
+app.add_typer(ignore.app, name="ignore", help="Ignore all vulnerabilities from a dependency")
 
 def main():
     return True

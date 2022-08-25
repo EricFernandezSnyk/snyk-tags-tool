@@ -1,3 +1,7 @@
+# Please refer to https://github.com/snyk-labs/snyk-tags-tool for the latest version of snyk-tags
+
+
+
 # Snyk Tags Tool
 
 Snyk Tags is a CLI tool which can:
